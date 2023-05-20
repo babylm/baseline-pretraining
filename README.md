@@ -2,9 +2,9 @@
 
 Python 3.9, transformer package in huggingface, and datasets package in huggingface.
 
-And also install this repo: https://github.com/chengxuz/pt_framework
+And also install: https://github.com/chengxuz/pt_framework
 
-Install this repo using `pip install .` or `pip install -e .`.
+Install the current repo using `pip install .` or `pip install -e .`.
 
 ## Where to put data
 
