@@ -26,3 +26,7 @@ This command will load a training setting specified by function `opt125m_s1` at 
 Learning rate schedule is defined at function `get_learning_rate_params` in script `basic_param_setter.py` under `src/babylm_baseline_train` folder.
 
 Optimizer is in the `scripts/general_train.py` script inside the `get_key_params` funciton.
+
+# Questions?
+
+Feel free to open issues here. Or just contact us through Slack/emails.
