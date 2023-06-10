@@ -37,6 +37,12 @@ def add_func_in_general(
             key_params['get_model_func'] = functools.partial(
                     helper.get_opt_func, 
                     opt_model_size='350m')
+        elif model_name == 'roberta-base':
+            key_params['get_model_func'] = helper.get_roberta_func
+        elif model_name == 'roberta-large':
+            key_params['get_model_func'] = functools.partial(
+                    helper.get_roberta_func,
+                    model_name=model_name)
         elif model_name is not None:
             raise NotImplementedError
         key_params['exp_id'] = exp_name

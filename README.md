@@ -14,6 +14,7 @@ The trained models will be put at `${BABYLM_ROOT_DIR}/models/` and the records w
 
 # Training Command
 
+## OPT-125M
 Run the following command under the `scripts` folder.
 ```
 python -m torch.distributed.launch --nproc_per_node=1 --master_port=29123 general_train.py --setting "BabyLM/exp_strict.py:opt125m_s1"
@@ -21,11 +22,21 @@ python -m torch.distributed.launch --nproc_per_node=1 --master_port=29123 genera
 
 This command will load a training setting specified by function `opt125m_s1` at `src/babylm_baseline_train/configs/BabyLM/exp_strict.py`.
 
+## RoBERTa-Base
+Run the following command under the `scripts` folder.
+```
+python -m torch.distributed.launch --nproc_per_node=1 --master_port=29123 general_train.py --setting "BabyLM/exp_strict_mask.py:roberta_s1"
+```
+
 # Where important parameters are defined
 
 Learning rate schedule is defined at function `get_learning_rate_params` in script `basic_param_setter.py` under `src/babylm_baseline_train` folder.
 
 Optimizer is in the `scripts/general_train.py` script inside the `get_key_params` funciton.
+
+# How to load the pretrained models
+
+See the functions in `src/babylm_baseline_train/models/ckpt_loader.py`.
 
 # Questions?
 
