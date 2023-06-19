@@ -17,6 +17,10 @@ def get_roberta_tokenizer_func(model_name="roberta-base"):
     tokenizer = RobertaTokenizer.from_pretrained(model_name)
     return tokenizer
 
+def get_t5_tokenizer_func(model_name="t5-base"):
+    from transformers import T5Tokenizer
+    tokenizer = T5Tokenizer.from_pretrained(model_name)
+    return tokenizer
 
 def get_tokenizer_func(opt_model_size='125m'):
     model_name = f"facebook/opt-{opt_model_size}"

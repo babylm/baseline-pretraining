@@ -14,10 +14,14 @@ setup(
     'transformers',
   ],
   install_requires=[
-    'torch>=1.6',
+    'torch==1.10.2',
     'transformers',
     'ipdb',
     'datasets',
+    'jax==0.3.21',
+    'jaxlib==0.3.20',   # NOTE: use this to train on GPU: pip install jaxlib==0.3.20+cuda11.cudnn82 -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html
+    'flax==0.6.1',
+    'sentencepiece',
   ],
   classifiers=[
     'Development Status :: 4 - Beta',
